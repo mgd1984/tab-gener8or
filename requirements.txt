@@ -13,12 +13,4 @@ mido>=1.2.10,<2.0.0
 
 # Required for basic-pitch
 scikit-learn>=1.0.2,<1.1.0
-tensorflow-cpu>=2.10.0,<2.12.0
-
-# Additional dependencies
-# ONNX model support (optional)
-# onnxruntime==1.16.3
-
-# Optional dependencies (uncomment if needed)
-# tensorflow==2.15.0  # For TF saved model support
-# tflite-runtime==2.15.0  # For TFLite model support 
+tensorflow-cpu>=2.9.0,<2.12.0
