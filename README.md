@@ -114,5 +114,5 @@ This project is licensed under the MIT License.
 Huge thanks to the creators of these amazing tools:
 
 -   [Basic Pitch](https://github.com/spotify/basic-pitch) by Spotify
--   [Tayuya](https://github.com/jcbhmr/tayuya) by @jcbhmr
+-   [Tayuya](https://github.com/vipul-sharma20/tayuya) by @vipul-sharma20
 -   [Streamlit](https://streamlit.io) for making web app creation in Python so accessible.
