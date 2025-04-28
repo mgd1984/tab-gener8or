@@ -13,11 +13,11 @@ mido>=1.2.10,<2.0.0
 
 # Required for basic-pitch
 scikit-learn>=1.0.2,<1.1.0
-tensorflow-cpu==2.11.0
+tensorflow-cpu>=2.10.0,<2.12.0
 
 # Additional dependencies
-# tensorflow-cpu>=2.13.0,<2.16.0  # CPU version is sufficient for inference
-# onnxruntime==1.16.3  # For ONNX model support
+# ONNX model support (optional)
+# onnxruntime==1.16.3
 
 # Optional dependencies (uncomment if needed)
 # tensorflow==2.15.0  # For TF saved model support
