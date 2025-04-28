@@ -66,7 +66,6 @@ Ready to try it out? Here's how to get Tab Gener8or running on your own computer
 -   **Clean Audio is Key:** The clearer your recording (minimal noise, effects, or other instruments), the better the AI can "hear" the notes accurately. Direct input (DI) recordings often work great.
 -   **Single Instrument Focus:** While it might sometimes work with multiple instruments, Basic Pitch is primarily designed for single-instrument (monophonic or polyphonic) analysis. Feed it just the guitar track for best results.
 -   **Clear Note Definition:** Heavily distorted or complex, fast passages can be challenging for the AI. Start with cleaner tones and well-defined riffs if you're having trouble.
--   **Sample Data:** Check the `sample_data/` directory for an example MP3 (`trade-war-surfin.mp3`) and its corresponding generated MIDI and Tab files to see what the output looks like.
 -   **Command Line Power:** Prefer the command line? Use `main.py` for direct processing:
     ```bash
     # Make sure your venv is active first
