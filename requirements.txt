@@ -1,6 +1,6 @@
 # Core dependencies
 streamlit>=1.24.0,<2.0.0
-basic-pitch==0.4.0 --no-deps
+basic-pitch==0.4.0
 tayuya==0.0.4
 
 # Audio processing
