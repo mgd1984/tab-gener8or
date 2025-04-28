@@ -2,7 +2,7 @@
   <img src="assets/images/player-piano-5.png" alt="Tab Gener8or Logo" width="100%">
 </p>
 
-# MP3 to Guitar Tab Converter
+# Tab Gener8or
 
 A web application that converts MP3 audio recordings into guitar tablature notation. Perfect for documenting your riffs, learning songs by ear, or sharing your musical ideas.
 
