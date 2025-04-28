@@ -153,6 +153,13 @@ hr {
     color: #e0e0e0 !important;
 }
 
+.tab-instructions {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #999;
+}
+
 /* Success message */
 .stSuccess {
     background-color: rgba(76, 175, 80, 0.2) !important;
@@ -217,7 +224,8 @@ pre {
     white-space: pre;
     overflow-x: auto;
     max-width: 100%;
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.3;
     margin: 0;
     padding: 0;
     color: #e0e0e0 !important;
@@ -607,6 +615,13 @@ hr {
     display: block !important;
     margin-top: 1rem !important;
     color: #333333 !important;
+}
+
+.tab-instructions {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #999;
 }
 
 /* Success message */
@@ -1032,9 +1047,9 @@ def format_tab_for_display(tab_text):
             max_length = max(len(line) for line in chunk)
             
             # If lines are too long, split them into smaller segments
-            if max_length > 80:  # Increased from 60 to 80 for better display
+            if max_length > 100:  # Increased from 80 to 100 for better display
                 # How many segments we need
-                segment_width = 80
+                segment_width = 100
                 segments = (max_length + segment_width - 1) // segment_width
                 
                 for seg in range(segments):
@@ -1095,10 +1110,8 @@ def format_tab_for_display(tab_text):
             formatted_lines.append(lines[i])
             i += 1
     
-    # Add CSS class for scrollable container to handle really wide tabs
-    formatted_text = '\n'.join(formatted_lines)
-    
-    return formatted_text
+    # Just return the formatted text - the container will be added by the calling function
+    return '\n'.join(formatted_lines)
 
 def get_download_link(binary_file, filename, text, class_name=""):
     """Generate a download link for a binary file."""
@@ -1339,7 +1352,14 @@ def main():
                     with tab_container:
                         formatted_tab = format_tab_for_display(results["tabs"])
                         # Use a monospace pre tag for better rendering with proper HTML escaping
-                        st.markdown(f'<div class="tab-container"><pre>{html.escape(formatted_tab)}</pre></div>', unsafe_allow_html=True)
+                        st.markdown(f"""
+                        <div class="tab-container">
+                            <pre>{html.escape(formatted_tab)}</pre>
+                            <div class="tab-instructions">
+                                <small>Scroll horizontally to see more ➡️</small>
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
                 else:
                     st.error("Failed to generate guitar tab. The audio may not contain distinct notes or may be too complex.")
                     st.info("Try with a cleaner recording or a simpler melody for better results.")
