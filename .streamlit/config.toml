@@ -14,4 +14,4 @@ maxUploadSize = 100
 gatherUsageStats = false
 
 [deprecation]
-showPyplotGlobalUse = false 
+# showPyplotGlobalUse = false 

@@ -6,7 +6,7 @@ from io import StringIO
 import contextlib
 import time
 import logging
-from basic_pitch.inference import predict
+from basic_pitch.inference import BasicPitchInference
 from tayuya import MIDIParser
 import base64
 import re
@@ -981,11 +981,14 @@ def process_audio(audio_file):
         tmp_midi_path = tmp_midi.name
     
     try:
+        # set up the TFLite‐only inference engine
+        infer = BasicPitchInference(use_tflite=True)
+        
         with st.spinner("🎵 Analyzing audio using Basic Pitch..."):
-            # Suppress stdout for Basic Pitch prediction
+            # Suppress stdout and run the TFLite backend
             with contextlib.redirect_stdout(StringIO()):
-                # 1. mp3 ➜ midi (in-memory)
-                model_out, midi_data, note_events = predict(tmp_audio_path)
+                # 1. mp3 ➜ midi (in-memory) via TFLite
+                model_out, midi_data, note_events = infer.predict(tmp_audio_path)
             
             # Save MIDI to temporary file
             midi_data.write(tmp_midi_path)
