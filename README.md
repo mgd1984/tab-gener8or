@@ -1,3 +1,5 @@
+<img src="assets/images/player-piano-6.png" alt="Tab Gener8or Logo" width="200">
+
 # MP3 to Guitar Tab Converter
 
 A web application that converts MP3 audio recordings into guitar tablature notation. Perfect for documenting your riffs, learning songs by ear, or sharing your musical ideas.
