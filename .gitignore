@@ -1,0 +1,102 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# Usually these files are written by a CI, but they might be copied to Projects.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+ENV.bak/
+env.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS specific files
+.DS_Store
+Thumbs.db
+.directory
+Desktop.ini
+
+# Application specific
+*.mid
+*.mp3
+*_tab.txt
+!sample_data/*.mp3  # Keep sample mp3 files in the sample_data directory
+!sample_data/*.mid  # Keep sample midi files in the sample_data directory
+!sample_data/*.txt  # Keep sample tab files in the sample_data directory
+
+# Streamlit artifacts
+.streamlit/secrets.toml
+
+# Docker artifacts
+!.dockerignore
+
+# Log files
+*.log
+logs/ 

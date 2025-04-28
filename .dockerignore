@@ -1,0 +1,43 @@
+# Version control
+.git
+.gitignore
+
+# Environment and dependencies
+venv/
+.env
+.venv
+env/
+*.pyc
+__pycache__/
+
+# Tests and documentation
+tests/
+docs/
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+*.tmp
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Large media files (except samples)
+*.mp3
+*.wav
+*.flac
+*.mid
+!sample_data/*.mp3
+
+# Docker related
+Dockerfile
+.dockerignore 
