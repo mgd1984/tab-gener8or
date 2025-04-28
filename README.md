@@ -91,7 +91,6 @@ tab-gener8or/
 ├── .gitignore              # Files for Git to ignore
 ├── assets/                 # Static assets (images, etc.)
 │   └── images/
-├── sample_data/            # Example MP3, MIDI, and Tab files
 └── venv/                   # Virtual environment directory (after creation)
 ```
 
