@@ -1,18 +1,19 @@
 # Core dependencies
-streamlit==1.24.0  # More stable version
+streamlit>=1.24.0,<2.0.0
 basic-pitch==0.4.0
 tayuya==0.0.4
 
 # Audio processing
-numpy==1.23.5
-librosa==0.10.0
+numpy>=1.23.5,<1.24.0
+librosa>=0.10.0,<0.11.0
+matplotlib>=3.7.0,<3.8.0
 
 # MIDI handling
-mido==1.2.10
+mido>=1.2.10,<2.0.0
 
 # Required for basic-pitch
-scikit-learn==1.0.2
-tensorflow==2.11.0
+scikit-learn>=1.0.2,<1.1.0
+tensorflow-cpu==2.11.0
 
 # Additional dependencies
 # tensorflow-cpu>=2.13.0,<2.16.0  # CPU version is sufficient for inference
