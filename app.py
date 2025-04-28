@@ -1130,17 +1130,17 @@ def get_image_as_base64(image_path):
 
 def render_hero_section():
     """Render the landing page hero section with background image"""
-    # Check if player-piano-5.png exists in the assets/images directory
-    image_path = "assets/images/player-piano-5.png"
+    # Check if player-piano-7.png exists in the assets/images directory
+    image_path = "assets/images/player-piano-7.png"
     
     # Try to locate the image file
     if not os.path.exists(image_path):
         # If not in current directory, check common image directories
         possible_paths = [
-            "images/player-piano-5.png",
-            "static/player-piano-5.png",
-            "assets/player-piano-5.png",
-            "../player-piano-5.png"
+            "images/player-piano-7.png",
+            "static/player-piano-7.png",
+            "assets/player-piano-7.png",
+            "../player-piano-7.png"
         ]
         
         for path in possible_paths:
@@ -1160,9 +1160,9 @@ def render_hero_section():
     <div class="hero-container">
         {img_html}
         <div class="hero-content">
-            <h1 class="hero-title">Transform Music into Tablature</h1>
+            <h1 class="hero-title">Tab Gener8or</h1>
+            <h3 class="hero-subtitle">Transform Music into Tabs</h3>
             <p class="hero-subtitle">Convert your guitar recordings to easy-to-read tabs with our advanced AI-powered tool</p>
-            <button onclick="document.getElementById('get-started').scrollIntoView({{behavior: 'smooth'}})" class="cta-button">Get Started</button>
         </div>
     </div>
     """
@@ -1172,23 +1172,9 @@ def render_hero_section():
 def main():
     # Add theme toggle in sidebar
     with st.sidebar:
-        st.title("Settings")
-        theme_options = ["Dark Mode", "Light Mode"]
-        selected_theme = st.radio("Choose Theme:", theme_options, 
-                                index=0 if st.session_state.theme == 'dark' else 1)
         
-        # Update session state based on selection
-        st.session_state.theme = 'dark' if selected_theme == "Dark Mode" else 'light'
-        
-        if st.session_state.show_landing:
-            if st.button("Skip Intro"):
-                st.session_state.show_landing = False
-                st.rerun()
-        else:
-            if st.button("Show Landing Page"):
-                st.session_state.show_landing = True
-                st.rerun()
-        
+        st.title("Tab Gener8or")
+
         st.divider()
         
         # Help section
@@ -1219,6 +1205,25 @@ def main():
         st.markdown(f"""
         This app uses {pitch_text} for audio-to-MIDI conversion and {tayuya_text} for MIDI-to-tablature rendering.
         """, unsafe_allow_html=True)
+
+        st.subheader("Settings")
+        theme_options = ["Dark Mode", "Light Mode"]
+        selected_theme = st.radio("Choose Theme:", theme_options, 
+                                index=0 if st.session_state.theme == 'dark' else 1)
+        
+        # Update session state based on selection
+        st.session_state.theme = 'dark' if selected_theme == "Dark Mode" else 'light'
+        
+        # if st.session_state.show_landing:
+        #     if st.button("Hide Landing Page"):
+        #         st.session_state.show_landing = False
+        #         st.rerun()
+        # else:
+        #     if st.button("Show Landing Page"):
+        #         st.session_state.show_landing = True
+        #         st.rerun()
+        
+        
     
     # Apply the appropriate CSS based on theme choice
     if st.session_state.theme == 'dark':
@@ -1335,17 +1340,7 @@ def main():
                         st.markdown(tab_download, unsafe_allow_html=True)
                     
                     # Display the tab with a better heading
-                    st.subheader("Guitar Tablature")
-                    
-                    # Add tab explanation with better styling
-                    st.markdown("""
-                    <div style="margin-bottom: 1rem; padding: 10px; background-color: rgba(255, 77, 77, 0.1); border-radius: 5px; border-left: 3px solid #ff4d4d;">
-                        <small>
-                            <strong>How to read:</strong> Each line represents a guitar string (e, B, G, D, A, E from top to bottom).
-                            Numbers indicate which fret to press on that string.
-                        </small>
-                    </div>
-                    """, unsafe_allow_html=True)
+                    st.subheader("Guitar Tablature")                
                     
                     # Create a full-width container for the tab
                     tab_container = st.container()
