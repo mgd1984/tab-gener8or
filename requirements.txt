@@ -1,6 +1,6 @@
 # Core dependencies
 streamlit>=1.24.0,<2.0.0
-basic-pitch==0.4.0
+basic-pitch==0.4.0           --no-deps   # install it but ignore its old pins
 tayuya==0.0.4
 
 # Audio processing
@@ -13,7 +13,7 @@ mido>=1.2.10,<2.0.0
 
 # Required for basic-pitch
 scikit-learn==1.4.2
-tensorflow-cpu>=2.10.0,<2.12.0
+tensorflow-cpu==2.16.2                    # first cp310 / cp311 wheel with proto 3.20+
 
 # Build tools (try adding specific versions for compatibility)
 setuptools==68.0.0
