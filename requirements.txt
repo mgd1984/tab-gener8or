@@ -4,7 +4,7 @@ basic-pitch==0.4.0
 tayuya==0.0.4
 
 # Audio processing
-numpy>=1.23.5,<1.24.0
+numpy>=1.26.0
 librosa>=0.10.0,<0.11.0
 matplotlib>=3.7.0,<3.8.0
 
