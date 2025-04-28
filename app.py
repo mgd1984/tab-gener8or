@@ -1117,17 +1117,17 @@ def get_image_as_base64(image_path):
 
 def render_hero_section():
     """Render the landing page hero section with background image"""
-    # Check if player-piano-5.png exists in the assets/images directory
-    image_path = "assets/images/player-piano-5.png"
+    # Check if player-piano-6.png exists in the assets/images directory
+    image_path = "assets/images/player-piano-6.png"
     
     # Try to locate the image file
     if not os.path.exists(image_path):
         # If not in current directory, check common image directories
         possible_paths = [
-            "images/player-piano-5.png",
-            "static/player-piano-5.png",
-            "assets/player-piano-5.png",
-            "../player-piano-5.png"
+            "images/player-piano-6.png",
+            "static/player-piano-6.png",
+            "assets/player-piano-6.png",
+            "../player-piano-6.png"
         ]
         
         for path in possible_paths:
