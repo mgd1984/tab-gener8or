@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/images/player-piano-6.png" alt="Tab Gener8or Logo" width="100%">
+  <img src="assets/images/player-piano-5.png" alt="Tab Gener8or Logo" width="100%">
 </p>
 
 # MP3 to Guitar Tab Converter
