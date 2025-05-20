@@ -16,7 +16,7 @@ scikit-learn==1.4.2
 tflite-runtime==2.14.0
 
 # Build tools (try adding specific versions for compatibility)
-setuptools==68.0.0
+setuptools==78.1.1
 wheel==0.41.2
 
 --only-binary scikit-learn
